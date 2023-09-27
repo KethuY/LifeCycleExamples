@@ -1,0 +1,150 @@
+// Adding fragment
+
+Acticvity ->  fragmentA ->        fragmentB
+
+oncreate  -> onAttach,
+             onCreate,
+             onCreateView,
+             onViewCreated,
+             onViewStaeRestroed
+             onStart
+
+ onStart
+ onResume   onResume               onAttach
+                                   onCreate,
+                                   onCreateView,
+                                   onViewCreated,
+                                   onViewStateRestored,
+                                   onStart
+                                   OnResume
+        Device back button one time clicked
+            onPause
+                                     onPause
+ onPause
+             onStop
+                                     onStop
+onSTop
+                 onDestroyView
+                 onDestroy
+                 onDetach
+                                     onDestroyView
+                                     onDestroy
+                                     onDetach
+onDestroy
+
+
+Adding fragment using backstack
+Acticvity ->  fragmentA(no back stack) ->        fragmentB(back stack added)
+
+oncreate  -> onAttach,
+             onCreate,
+             onCreateView,
+             onViewCreated,
+             onViewStaeRestroed
+             onStart
+
+ onStart
+ onResume   onResume               onAttach
+                                   onCreate,
+                                   onCreateView,
+                                   onViewCreated,
+                                   onViewStateRestored,
+                                   onStart
+                                   OnResume
+
+   Device back button clicked 1 once and came to fragment A
+                                   onPause
+                                   onStop
+                                   onDestroyView
+                                   onDestroy
+                                   onDetach
+   Device back button cliked 2nd time and activity finised
+
+                onPause
+ onPause
+                onSTop
+onStop
+                onDestroyView
+                onDestroy
+                onAttach
+onDestroy
+
+// Adding fragment using Repalce (No backstack)
+
+Activity -> fragment A -> fragment B
+
+oncreate  -> onAttach,
+             onCreate,
+             onCreateView,
+             onViewCreated,
+             onViewStaeRestroed
+             onStart
+
+ onStart
+ onResume   onResume
+             onPause
+             onStop
+                                   onAttach
+                                   onCreate,
+                                   onCreateView,
+                                   onViewCreated,
+                                   onViewStateRestored,
+                                   onStart
+             onDestroyView
+             onDestroy
+             onDetach
+                                   OnResume
+        Device back button clicked once
+                                   onPause
+ onPause
+                                   onStop
+ onStop
+                                    onDestroyView
+                                    onDestroy
+                                    onDetach
+ onDestroy
+
+   // Adding fragment using Repalce (backstack)
+
+   Activity -> fragment A -> fragment B
+
+
+oncreate  -> onAttach,
+             onCreate,
+             onCreateView,
+             onViewCreated,
+             onViewStaeRestroed
+             onStart
+
+ onStart
+ onResume   onResume
+            onPause
+            onStop
+                            onAttach,
+                            onCreate,
+                            onCreateView,
+                            onViewCreated,
+                            onViewStaeRestroed
+                            onStart
+            onDestroy
+                            onResume
+        Device back button clicked once
+            onCreateView
+            onViewCreated
+            onViewStateRestroed
+            onStart
+                            onDesttroyView
+                            onDestroy
+                            onDetach
+            onResume
+
+            Deivce back button clicked 2nd time
+            onPause
+ onPause
+            onStop
+ onStop
+            onDestroyView
+            OnDestroy
+            onDetach
+onDestroy
+
